@@ -188,8 +188,8 @@ class _QueryDialog(Dialog):
                  parent=None):
 
         if not parent:
-            import Tkinter
-            parent = Tkinter._default_root
+            parent = _tk.Tk()
+            parent.withdraw()
 
         self.prompt = prompt
         self.minvalue = minvalue
@@ -219,7 +219,10 @@ class _QueryDialog(Dialog):
 
     def validate(self):
 
-        import tkMessageBox
+        if sys.version_info.major == 3:
+            from tkinter import messagebox as tkMessageBox
+        else:
+            import tkMessageBox
 
         try:
             result = self.getresult()
@@ -260,6 +263,7 @@ class _QueryInteger(_QueryDialog):
     def getresult(self):
         return int(self.entry.get())
 
+
 def askinteger(title, prompt, **kw):
     '''get an integer from the user
 
@@ -274,11 +278,13 @@ def askinteger(title, prompt, **kw):
     d = _QueryInteger(title, prompt, **kw)
     return d.result
 
+
 class _QueryFloat(_QueryDialog):
     errormessage = "Not a floating point value."
 
     def getresult(self):
         return float(self.entry.get())
+
 
 def askfloat(title, prompt, **kw):
     '''get a float from the user
@@ -293,6 +299,7 @@ def askfloat(title, prompt, **kw):
     '''
     d = _QueryFloat(title, prompt, **kw)
     return d.result
+
 
 class _QueryString(_QueryDialog):
     def __init__(self, *args, **kw):
@@ -311,6 +318,7 @@ class _QueryString(_QueryDialog):
 
     def getresult(self):
         return self.entry.get()
+
 
 def askstring(title, prompt, **kw):
     '''get a string from the user

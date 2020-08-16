@@ -11,7 +11,7 @@ Please note you must call it using the "from __ import __" syntax!"""
 
 setuptools.setup(
     name="ttkSimpleDialog",
-    version="1.2.0",
+    version="1.2.1",
     description="ttk themed version of ttkSimpleDialog",
     author="Tyler Holmes",
     author_email="tyler@holmesengineering.com",
