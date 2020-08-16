@@ -18,8 +18,8 @@ setup(name="ttkSimpleDialog",
       version="1.2.0",
       description="ttk themed version of ttkSimpleDialog",
       author="Tyler Holmes",
-      author_email="tylerdanielholmes@gmail.com",
-      url="holmesengineering.com",
+      author_email="tyler@holmesengineering.com",
+      url="https://github.com/TDHolmes/ttkSimpleDialog",
       # Name the folder where your packages live:
       # (If you have other packages (dirs) or modules (py files) then
       # put them into the package directory - they will be found
