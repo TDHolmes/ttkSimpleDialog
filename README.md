@@ -11,7 +11,7 @@ Example
 -------
 
     from ttkSimpleDialog import ttkSimpleDialog
-    
+
     user_response = ttkSimpleDialog.askinteger(title="hello", prompt="Enter a number")
 
 Please note you must call it using the "from __ import __" syntax!
