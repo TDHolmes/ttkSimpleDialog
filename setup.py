@@ -15,7 +15,7 @@ Here is an example of how to use it::
 Please note you must call it using the "from __ import __" syntax!"""
 
 setup(name="ttkSimpleDialog",
-      version="1.0.1",
+      version="1.2.0",
       description="ttk themed version of ttkSimpleDialog",
       author="Tyler Holmes",
       author_email="tylerdanielholmes@gmail.com",

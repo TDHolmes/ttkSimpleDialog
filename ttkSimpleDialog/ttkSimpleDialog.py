@@ -28,8 +28,13 @@ askfloat -- get a float from the user
 
 askstring -- get a string from the user
 '''
-import Tkinter as _tk
-import ttk as _ttk
+import sys
+if sys.version_info.major == 3:
+    import tkinter as _tk
+    from tkinter import ttk as _ttk
+else:
+    import Tkinter as _tk
+    import ttk as _ttk
 
 
 class Dialog(_tk.Toplevel):
